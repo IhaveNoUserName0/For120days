@@ -13,12 +13,12 @@ const interval = setInterval(() => {
 
         setTimeout(() => {
             counter.style.marginBottom = "0";
-            counter.style.fontSize = "18px";
+            counter.style.fontSize = "28px";
             msg.classList.add("visible");
         }, 1000);
 
         setTimeout(() => {
             container.classList.add("heart");
-        }, 2000);
+        }, 3000);
     }
 }, 50);

@@ -27,13 +27,13 @@ body{
 }
 .msg{
     margin: 0;
-    transition:all 3s;
+    transition:all 5s;
     visibility: hidden ;
 }
 #counter{
     font-size: 75px;
     margin: 0;
-    transition: 1s;
+    transition: 2s;
     margin-bottom: -50px;
 }
 .visible{
