@@ -1,7 +1,9 @@
 let msg = document.querySelector(".msg");
-let counter = document.querySelector("#counter");
-let img = document.querySelector("#img");
+let counter = document.getElementById("counter");
+let img = document.getElementById("img");
 let container = document.querySelector(".container");
+let audio = document.getElementById("aud");
+let click = document.querySelector(".click");
 let days = 0;
 
 const interval = setInterval(() => {
@@ -19,6 +21,12 @@ const interval = setInterval(() => {
 
         setTimeout(() => {
             container.classList.add("heart");
+            click.style.opacity = "1";
+            click.style.transition = "all 2s ease-in-out";
+            container.addEventListener("click", () => {
+                console.log("click");
+                audio.play();
+            });
         }, 3000);
     }
 }, 45);
