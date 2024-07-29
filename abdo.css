@@ -27,18 +27,16 @@ body{
 }
 .msg{
     margin: 0;
-    transition:all 5s;
-    visibility: hidden ;
+    display: none;  
+    transition: all 4s linear;
 }
 #counter{
     font-size: 75px;
     margin: 0;
     transition: 2s;
-    margin-bottom: -50px;
 }
 .visible{
-    transition: all 3s;
-    visibility: visible;
+    display: block;
 }
 .heart{
     animation-name: heartBeat;

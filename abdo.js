@@ -12,8 +12,8 @@ const interval = setInterval(() => {
         clearInterval(interval);
 
         setTimeout(() => {
-            counter.style.marginBottom = "0";
             counter.style.fontSize = "28px";
+            counter.style.transition = "all 2s ease-in-out";
             msg.classList.add("visible");
         }, 1000);
 
@@ -21,4 +21,5 @@ const interval = setInterval(() => {
             container.classList.add("heart");
         }, 3000);
     }
-}, 50);
+}, 45);
+console.log(120);
