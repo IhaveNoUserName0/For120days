@@ -28,7 +28,7 @@ body{
 .msg{
     margin: 0;
     display: none;  
-    transition: all 4s linear;
+    transition: all 1s linear;
 }
 #counter{
     font-size: 75px;
