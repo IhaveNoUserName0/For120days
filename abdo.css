@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Silkscreen:wght@400;700&display=swap');
 body{
-    background-color: #ff00ab;
+    background-color: #ff00abc2;
     font-family: "Silkscreen", sans-serif;
     height: 90vh;
     display: flex;
@@ -34,27 +34,28 @@ body{
 #counter{
     font-size: 75px;
     margin: 0;
-    transition: 2s;
 }
 .visible{
     display: block;
 }
 .heart{
-    animation-name: heartBeat;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function:ease-in-out;
+    animation: heartBeat 1s ease-in-out infinite alternate;
 }
 #aud{
     display: none;
 }
 .click{
     font-family: Arial, Helvetica, sans-serif;
-    color : #383838;
+    color : #81056a;
     margin-top: 20px;
     font-size: 40px;
     opacity: 0;
+}
+.red{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: ascend 5s linear ;
 }
 @keyframes heartBeat {
     from{
@@ -63,4 +64,40 @@ body{
     to{
         transform: scale(1.1);
     }
+}
+@keyframes ascend {
+    0%{
+        transform: translate(2px,-82px);
+    } 
+    10%{
+        transform: translate(-2px,-164px);
+    }
+    20%{
+        transform: translate(2px,-246px);
+    }
+    30%{
+        transform: translate(-2px,-328px);
+    }
+    40%{
+        transform: translate(2px,-410px);
+    }
+    50%{
+        transform: translate(-2px,-492px);
+    }
+    60%{
+        transform: translate(2px,-574px);
+    }
+    70%{
+        transform: translate(-2px,-656px);
+    }
+    80%{
+        transform: translate(2px,-738px);
+    }
+    90%{
+        transform: translate(-2px,-820px);
+    }
+    100%{
+        transform: translate(2px,-902px);
+    }
+    
 }

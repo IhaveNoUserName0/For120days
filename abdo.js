@@ -6,9 +6,25 @@ let audio = document.getElementById("aud");
 let click = document.querySelector(".click");
 let days = 0;
 
+function getRandomInt(num){
+    return Math.floor(Math.random() * num);
+}
+function createHeart(){
+    let heart = document.createElement('img');
+    heart.src = 'redheart.png';
+    heart.className = 'red';
+    heart.style.top = `${getRandomInt(240)}px`;
+    heart.style.left = `${getRandomInt(240)}px`;
+    heart.style.transform = `rotate(${getRandomInt(60)}deg)`;
+    container.appendChild(heart);
+    setTimeout(()=>{
+        heart.remove();
+    },5000);
+}
+
 const interval = setInterval(() => {
     days++;
-    counter.innerText = days;
+    counter.textContent = days;
 
     if (days === 120) {
         clearInterval(interval);
@@ -24,10 +40,11 @@ const interval = setInterval(() => {
             click.style.opacity = "1";
             click.style.transition = "all 2s ease-in-out";
             container.addEventListener("click", () => {
-                console.log("click");
-                audio.play();
+            audio.play();
+            for(let i = 0 ; i < 30 ; i++){
+                createHeart();
+            } 
             });
         }, 3000);
     }
 }, 45);
-console.log(120);
