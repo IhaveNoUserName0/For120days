@@ -30,7 +30,7 @@ const interval = setInterval(() => {
         clearInterval(interval);
 
         setTimeout(() => {
-            counter.style.fontSize = "28px";
+            counter.style.transform = "scale(1)";
             counter.style.transition = "all 1s ease-in-out";
             msg.classList.add("visible");
         }, 1000);
